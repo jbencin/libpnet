@@ -18,12 +18,13 @@ netmap = ["pnet_datalink/netmap_sys", "pnet_datalink/netmap"]
 pcap = ["pnet_datalink/pcap"]
 appveyor = []
 travis = []
+schemars = ["ipnetwork/schemars"]
 serde = ["pnet_base/serde", "pnet_datalink?/serde"]
 std = ["pnet_base/std", "pnet_sys", "pnet_datalink", "pnet_transport", "ipnetwork"]
 default = ["pnet_base/default", "pnet_datalink/default", "pnet_transport/default", "pnet_packet/default"]
 
 [dependencies]
-ipnetwork = { version = "0.19.0", optional = true }
+ipnetwork = { version = "0.20.0", optional = true }
 
 pnet_base = { path = "pnet_base", version = "0.31.0", default-features = false }
 pnet_sys = { path = "pnet_sys", version = "0.31.0", optional = true, default-features = false }
